@@ -1,12 +1,12 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Header from './Header';
+import Main from './Main';
 
 export default {
-  title: 'components/Header',
-  component: Header,
+  title: 'components/Main',
+  component: Main,
 } as Meta;
 
-const Template: StoryFn<typeof Header> = () => <Header />;
+const Template: StoryFn<typeof Main> = () => <Main>Main Content</Main>;
 
 export const Default = Template.bind({});
