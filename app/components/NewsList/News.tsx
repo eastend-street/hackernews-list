@@ -24,7 +24,7 @@ export default function News({
       }
     });
     observer.observe(newsRef.current);
-  }, [isLastStory, fetchNextStories]);
+  }, [isLastStory]);
 
   return story.url ? (
     <a

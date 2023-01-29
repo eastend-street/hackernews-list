@@ -24,7 +24,7 @@ export default function useFetchStories({
 
   const fetchStories = useCallback(
     (startIndex: number) => {
-      if (startIndex >= topStoryIds.length) return;
+      if (startIndex >= topStoryIds.length || isLoading) return;
       setIsLoading(true);
       Promise.all(
         topStoryIds
