@@ -7,7 +7,6 @@ export default function useFetchStories({
 }: {
   topStoryIds: number[];
 }) {
-  console.log({ topStoryIds });
   const [stories, setStories] = useState<Story[]>([]);
   const fetchStoryById = useCallback(
     async (storyId: number): Promise<Story> => {
