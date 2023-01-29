@@ -1,3 +1,5 @@
+import Skeleton from './components/Skeleton';
+
 export default function Loading() {
-  return <p>Loading...</p>;
+  return <Skeleton numOfSkeletons={100} />;
 }
