@@ -4,8 +4,9 @@ export interface Story {
   id: number;
   kids: number[];
   score: number;
+  text: string;
   time: number;
   title: string;
   type: 'story';
-  url: string;
+  url?: string;
 }

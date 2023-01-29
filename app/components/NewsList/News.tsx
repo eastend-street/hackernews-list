@@ -26,9 +26,9 @@ export default function News({
     observer.observe(newsRef.current);
   }, [isLastStory]);
 
-  return story.url ? (
+  return (
     <a
-      href={story.url}
+      href={story?.url || `https://news.ycombinator.com/item?id=${story.id}`}
       target="_blank"
       rel="noreferrer"
       ref={newsRef}
@@ -36,9 +36,5 @@ export default function News({
     >
       {index + 1}. {story.title}
     </a>
-  ) : (
-    <span ref={newsRef}>
-      {index + 1}. {story.title}
-    </span>
   );
 }
