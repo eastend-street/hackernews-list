@@ -1,21 +1,19 @@
-'use client';
-import News from '../components/News';
-import useFetchStories from '../hooks/useFetchStories';
+import { HACKER_NEWS_API_BASE_URL } from './constants/apiUrls';
+import NewsList from './components/NewsList/NewsList';
 
-export default function Home() {
-  const { stories, fetchStories } = useFetchStories();
-  return (
-    <ul>
-      {stories.map((story, index) => (
-        <li key={story.id} className="my-2">
-          <News
-            story={story}
-            index={index}
-            isLastStory={index === stories.length - 1}
-            fetchNextStories={() => fetchStories(index + 1)}
-          />
-        </li>
-      ))}
-    </ul>
+async function fetchTopStoryIds(): Promise<number[]> {
+  const response = await fetch(
+    `${HACKER_NEWS_API_BASE_URL}/v0/topstories.json`
   );
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return response.json();
+}
+
+export default async function Home() {
+  const topStoryIds = await fetchTopStoryIds();
+  return <NewsList topStoryIds={topStoryIds} />;
 }

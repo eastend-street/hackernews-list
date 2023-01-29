@@ -1,24 +1,22 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Story } from '../types/story';
-import { HACKER_NEWS_API_BASE_URL } from '../constants/apiUrls';
+import { HACKER_NEWS_API_BASE_URL } from '../../constants/apiUrls';
+import { Story } from '../../types/story';
 
-export default function useFetchStories() {
-  const [topStoryIds, setTopStoryIds] = useState<number[]>([]);
+export default function useFetchStories({
+  topStoryIds,
+}: {
+  topStoryIds: number[];
+}) {
   const [stories, setStories] = useState<Story[]>([]);
-
-  const fetchTopStoryIds = useCallback(() => {
-    fetch(`${HACKER_NEWS_API_BASE_URL}/v0/topstories.json`)
-      .then((res) => res.json())
-      .then((storyIds) => {
-        setTopStoryIds(storyIds);
-      });
-  }, [setTopStoryIds]);
-
+  const [isLoading, setIsLoading] = useState(false);
   const fetchStoryById = useCallback(
     async (storyId: number): Promise<Story> => {
       const response = await fetch(
         `${HACKER_NEWS_API_BASE_URL}/v0/item/${storyId}.json`
       );
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
       return response.json();
     },
     []
@@ -26,21 +24,23 @@ export default function useFetchStories() {
 
   const fetchStories = useCallback(
     (startIndex: number) => {
-      if (startIndex >= topStoryIds.length) return;
+      if (startIndex >= topStoryIds.length || isLoading) return;
+      setIsLoading(true);
       Promise.all(
         topStoryIds
           .slice(startIndex, startIndex + 100)
           .map((storyId) => fetchStoryById(storyId))
-      ).then((stories) => {
-        setStories((prevState) => [...prevState, ...stories]);
-      });
+      )
+        .then((stories) => {
+          setStories((prevState) => [...prevState, ...stories]);
+        })
+        .catch((error) => {
+          throw error;
+        })
+        .finally(() => setIsLoading(false));
     },
     [topStoryIds, fetchStoryById, setStories]
   );
-
-  useEffect(() => {
-    fetchTopStoryIds();
-  }, [fetchTopStoryIds]);
 
   useEffect(() => {
     fetchStories(0);
@@ -48,6 +48,7 @@ export default function useFetchStories() {
 
   return {
     stories,
+    isLoading,
     fetchStories,
   };
 }
