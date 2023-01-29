@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-import { Story } from '../../types/story';
+import { Story } from '../../../types/story';
 
 export default function News({
   story,
@@ -13,7 +13,7 @@ export default function News({
   isLastStory: boolean;
   fetchNextStories: () => void;
 }) {
-  const newsRef = useRef<HTMLAnchorElement>(null);
+  const newsRef = useRef(null);
 
   useEffect(() => {
     if (!newsRef?.current || !isLastStory) return;
@@ -37,8 +37,8 @@ export default function News({
       {index + 1}. {story.title}
     </a>
   ) : (
-    <>
+    <span ref={newsRef}>
       {index + 1}. {story.title}
-    </>
+    </span>
   );
 }

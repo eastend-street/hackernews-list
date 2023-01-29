@@ -1,19 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Story } from '../types/story';
-import { HACKER_NEWS_API_BASE_URL } from '../constants/apiUrls';
+import { HACKER_NEWS_API_BASE_URL } from '../../../constants/apiUrls';
+import { Story } from '../../../types/story';
 
-export default function useFetchStories() {
-  const [topStoryIds, setTopStoryIds] = useState<number[]>([]);
+export default function useFetchStories({
+  topStoryIds,
+}: {
+  topStoryIds: number[];
+}) {
+  console.log({ topStoryIds });
   const [stories, setStories] = useState<Story[]>([]);
-
-  const fetchTopStoryIds = useCallback(() => {
-    fetch(`${HACKER_NEWS_API_BASE_URL}/v0/topstories.json`)
-      .then((res) => res.json())
-      .then((storyIds) => {
-        setTopStoryIds(storyIds);
-      });
-  }, [setTopStoryIds]);
-
   const fetchStoryById = useCallback(
     async (storyId: number): Promise<Story> => {
       const response = await fetch(
@@ -37,10 +32,6 @@ export default function useFetchStories() {
     },
     [topStoryIds, fetchStoryById, setStories]
   );
-
-  useEffect(() => {
-    fetchTopStoryIds();
-  }, [fetchTopStoryIds]);
 
   useEffect(() => {
     fetchStories(0);
