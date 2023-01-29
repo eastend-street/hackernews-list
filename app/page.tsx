@@ -1,5 +1,5 @@
 'use client';
-import News from '../components/News';
+import News from './components/News';
 import useFetchStories from '../hooks/useFetchStories';
 
 export default function Home() {

@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-import { Story } from '../types/story';
+import { Story } from '../../types/story';
 
 export default function News({
   story,
