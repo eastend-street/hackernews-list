@@ -38,8 +38,10 @@ export default async function Home() {
   return (
     <ul>
       {topStories.map((story, index) => (
-        <li key={story.id}>
-          {index + 1}. {story.title}
+        <li key={story.id} className="my-1">
+          <a href={story.url} target="_blank" rel="noreferrer">
+            {index + 1}. {story.title}
+          </a>
         </li>
       ))}
     </ul>
