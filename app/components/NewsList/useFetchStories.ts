@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { HACKER_NEWS_API_BASE_URL } from '../../../constants/apiUrls';
-import { Story } from '../../../types/story';
+import { HACKER_NEWS_API_BASE_URL } from '../../constants/apiUrls';
+import { Story } from '../../types/story';
 
 export default function useFetchStories({
   topStoryIds,

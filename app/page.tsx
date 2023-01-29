@@ -1,4 +1,4 @@
-import { HACKER_NEWS_API_BASE_URL } from '../constants/apiUrls';
+import { HACKER_NEWS_API_BASE_URL } from './constants/apiUrls';
 import NewsList from './components/NewsList/NewsList';
 
 async function fetchTopStoryIds(): Promise<number[]> {
