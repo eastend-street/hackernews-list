@@ -17,6 +17,7 @@ export default function News({
 
   useEffect(() => {
     if (!newsRef?.current || !isLastStory) return;
+
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         fetchNextStories();

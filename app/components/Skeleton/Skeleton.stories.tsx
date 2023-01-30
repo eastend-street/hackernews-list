@@ -5,6 +5,9 @@ import Skeleton from './Skeleton';
 export default {
   title: 'components/Skeleton',
   component: Skeleton,
+  args: {
+    numOfSkeletons: 10,
+  },
 } as Meta;
 
 const Template: StoryFn<typeof Skeleton> = ({ numOfSkeletons }) => (
@@ -12,6 +15,3 @@ const Template: StoryFn<typeof Skeleton> = ({ numOfSkeletons }) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  numOfSkeletons: 10,
-};
