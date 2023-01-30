@@ -4,7 +4,7 @@ export interface Story {
   id: number;
   kids: number[];
   score: number;
-  text: string;
+  text?: string;
   time: number;
   title: string;
   type: 'story';
