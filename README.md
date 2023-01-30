@@ -52,7 +52,7 @@ npm run test
 npm run storybook
 ```
 
-# Folder Structure
+## Folder Structure
 ```
 /app
   layout.tsx -- Entry point
@@ -69,3 +69,18 @@ npm run storybook
   /types
 /mocks -- mock files for Jest
 ```
+
+## Accessibility
+
+I checked these points to improve a11y:
+- Added `aria-` and `role` attributes where necessary as well as using HTML tags properly. (e.g. Added `aria-hidden="true"` for the Skeleton nodes. Add `role="status"` to the parent Skeleton component)
+- Used `getByRole` as possible in tests instead of using `data-testid` and `getByTestId`. So that the unit tests can check a11y as well as the component behavior.
+
+
+## Fetching
+Since Hacker news doesn't provide an API to fetch multiple news at once. I had to call the endpoint for each news. But to reduce the number of endpoint calls from the client side as possible, I implemented to fetch top story ids on the server side. (This `fetchTopStoryIds` is executed on the sever side since it is under app directory) 
+Other endpoint calls are executed on the client side because the stories data is dynamic.
+
+<img width="859" alt="Screenshot 2023-01-29 at 7 41 37 PM" src="https://user-images.githubusercontent.com/43656115/215382907-7b13ade3-9e44-46b1-9a16-79982ba955f9.png">
+
+
