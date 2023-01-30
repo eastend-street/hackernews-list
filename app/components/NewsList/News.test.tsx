@@ -3,7 +3,7 @@ import { composeStories } from '@storybook/react';
 
 import * as stories from './News.stories';
 
-const { Default, WithoutUrl, LastStory } = composeStories(stories);
+const { Default, WithoutUrl } = composeStories(stories);
 
 describe('components/News', () => {
   test('should render News component', () => {
