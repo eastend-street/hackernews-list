@@ -79,7 +79,7 @@ I checked these points to improve a11y:
 
 
 ## Fetching
-Since Hacker news doesn't provide an API to fetch multiple news at once. I had to call the endpoint for each news. But to reduce the number of endpoint calls from the client side as possible, I implemented to fetch top story ids on the server side. (This `fetchTopStoryIds` is executed on the sever side since it is under app directory) 
+Since Hacker news doesn't provide an API to fetch multiple news at once, I had to call the endpoint for each news. But to reduce the number of endpoint calls from the client side as possible, I implemented to fetch top story ids on the server side. (This `fetchTopStoryIds` is executed on the sever side since it is under app directory) 
 Other endpoint calls are executed on the client side because the stories data is dynamic.
 
 <img width="859" alt="Screenshot 2023-01-29 at 7 41 37 PM" src="https://user-images.githubusercontent.com/43656115/215382907-7b13ade3-9e44-46b1-9a16-79982ba955f9.png">
