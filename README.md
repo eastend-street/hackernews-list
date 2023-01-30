@@ -5,6 +5,7 @@ This is a website to show top stories of Hacker news with infinite loading.
 - Demo(Vercel): https://hackernews-list.vercel.app/
 - Storybook(Chromatic): https://main--63d7085a4e0601fbed480dd5.chromatic.com/
 
+[<img width="600" alt="Screenshot 2023-01-29 at 7 47 25 PM" src="https://user-images.githubusercontent.com/43656115/215383547-06b81ebb-f5af-4f32-96ce-84e73d3de1ed.png">](https://hackernews-list.vercel.app/)
 
 ## Prerequisites
 - node >= v18.x
