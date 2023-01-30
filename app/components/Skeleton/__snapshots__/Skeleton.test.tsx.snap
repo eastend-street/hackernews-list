@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Skeleton should render Skeleton component 1`] = `
+<div>
+  <div
+    class="animate-pulse"
+    role="status"
+  >
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-0"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-1"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-2"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-3"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-4"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-5"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-6"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-7"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-8"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      class="flex"
+      data-testid="skeleton-node-9"
+    >
+      <div
+        class="my-3 mx-2 h-4 w-4 rounded-full bg-gray-200"
+      />
+      <div
+        class="my-3 h-4 w-96 rounded-full bg-gray-200"
+      />
+    </div>
+    <span
+      class="sr-only"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;

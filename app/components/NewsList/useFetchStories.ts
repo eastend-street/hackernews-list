@@ -14,10 +14,7 @@ export default function useFetchStories({
       const response = await fetch(
         `${HACKER_NEWS_API_BASE_URL}/v0/item/${storyId}.json`
       );
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch data');
-      }
+      if (!response.ok) throw new Error('Failed to fetch data');
       return response.json();
     },
     []

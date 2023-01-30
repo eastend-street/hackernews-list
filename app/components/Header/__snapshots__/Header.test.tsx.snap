@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Header should render Header component 1`] = `
+<div>
+  <header
+    class="flex items-center bg-orange py-1 px-3"
+  >
+    <h1
+      class="text-1xl font-bold"
+    >
+      Hacker News List
+    </h1>
+  </header>
+</div>
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/News should render News component 1`] = `
+<div>
+  <a
+    class="hover:underline"
+    href="https://fathy.fr/carbonyl"
+    rel="noreferrer"
+    target="_blank"
+  >
+    1
+    . 
+    Forking Chrome to render in a terminal
+  </a>
+</div>
+`;
