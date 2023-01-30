@@ -15,6 +15,7 @@ export default function News({
 }) {
   const newsRef = useRef(null);
 
+  // To execute fetchNextStories function when the last story is on the screen
   useEffect(() => {
     if (!newsRef?.current || !isLastStory) return;
 
