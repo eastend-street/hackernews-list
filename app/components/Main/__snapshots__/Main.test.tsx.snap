@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Main should render Main component 1`] = `
+<div>
+  <main
+    class="flex bg-ivory p-3"
+  >
+    Main Content
+  </main>
+</div>
+`;

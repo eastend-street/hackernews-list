@@ -3,11 +3,11 @@ import { composeStories } from '@storybook/react';
 
 import * as stories from './Header.stories';
 
-const { Default: Header } = composeStories(stories);
+const { Default } = composeStories(stories);
 
 describe('components/Header', () => {
   test('should render Header component', () => {
-    const { container } = render(<Header />);
+    const { container } = render(<Default />);
 
     const heading1 = screen.getByRole('heading', {
       name: /Hacker News List/i,
