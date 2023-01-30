@@ -1,54 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/NewsList should render 3 top stories 1`] = `
-<div>
-  <ul>
-    <li
-      class="my-2"
-    >
-      <a
-        class="hover:underline"
-        href="https://fathy.fr/carbonyl"
-        rel="noreferrer"
-        target="_blank"
-      >
-        1
-        . 
-        Forking Chrome to render in a terminal
-      </a>
-    </li>
-    <li
-      class="my-2"
-    >
-      <a
-        class="hover:underline"
-        href="https://research.gatech.edu/more-e-coli-meets-eye-bme-lab-discovers-evidence-multicellularity-single-cell-organism"
-        rel="noreferrer"
-        target="_blank"
-      >
-        2
-        . 
-        Evidence of Multicellularity in Single Cell Organism
-      </a>
-    </li>
-    <li
-      class="my-2"
-    >
-      <a
-        class="hover:underline"
-        href="https://www.washingtonpost.com/wellness/2023/01/29/strength-training-all-ages/"
-        rel="noreferrer"
-        target="_blank"
-      >
-        3
-        . 
-        For longevity, muscle strength may be as important as aerobic exercise
-      </a>
-    </li>
-  </ul>
-</div>
-`;
-
 exports[`components/NewsList should render NewsList component 1`] = `
 <div>
   <ul>
